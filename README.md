@@ -1,5 +1,4 @@
 # FINE3300-2026-A1
-This repository includes my assignment work on the exchange rate calculator.
 
 ## Project Overview
 
