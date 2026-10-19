@@ -22,13 +22,14 @@ print("----------------------------------------")
 print("Welcome to the best currency exchange calculator in the world!")
 print("----------------------------------------")
 
-exchange = ExchangeRates("BankOfCanadaExchangeRate.2026.csv")
+exchange = ExchangeRates("BankOfCanadaExchangeRate.2026.csv") # Create the object and load the latest rate from the supplied file.
 
-print(f"Current exchange rate from USD to CAD is: {exchange.rate: .2f}")
-print(f"Current exchange rate from CAD to USD is: {1/exchange.rate: .2f}")
+print(f"Current exchange rate from USD to CAD is: {exchange.rate: .2f}") # Display both rates to two decimal places.
+print(f"Current exchange rate from CAD to USD is: {1/exchange.rate: .2f}") # Calculations still use the full rate stored in the object.
 print("----------------------------------------")
 
-# the code broke on lowercase input, so I put .upper() to turn "usd" into "USD"
+# Collect the currencies and amount.
+# The code broke on lowercase input, so I put .upper() to turn "usd" into "USD"
 from_currency = input("From currency (USD or CAD): ").upper() 
 to_currency = input("To currency (USD or CAD): ").upper()
 amount = float(input(f"Enter the amount in {from_currency}: "))
