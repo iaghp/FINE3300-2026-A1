@@ -90,7 +90,7 @@ I gave the model one prompt, with the `BankOfCanadaExchangeRate.2026.csv` file a
 > Give me the output code text
 
 ### Comparison of My Code and the LLM Code
-Both programs gave the same answers: $100,000 USD became $139,780.00 CAD, and $100,000 CAD became $71,540.99 USD. They both use the latest rate of 1.3978, but read it differently. My code reads the file’s lines and takes the second-to-last value from the last row. Claude used `csv.DictReader` to find the rate by its column name, `FXAUSDCAD`. That approach is more efficient and would still work if the columns were rearranged. Mine depends on their current order. 
+Both programs gave the same answers: $100,000 USD became $139,780.00 CAD, and $100,000 CAD became $71,540.99 USD. They both use the latest rate of 1.3978, but read it differently. My code reads the file’s lines and takes the second-to-last value from the last row. Claude used `csv.DictReader` to find the rate by its column name, `FXAUSDCAD`. That approach is more reliable, since it would still work if the columns were rearranged. Mine depends on their current order. 
 
 I also wrote separate conditions for USD to CAD and CAD to USD. Claude only checks whether the starting currency is USD and otherwise treats it as CAD. That works with the valid inputs assumed in the assignment, but I find my conditions easier and simpler. 
 
