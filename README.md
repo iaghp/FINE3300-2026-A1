@@ -1,5 +1,4 @@
 # FINE3300-2026-A1
-
 ## Project Overview
 
 This project is a Python exchange-rate calculator. It reads the most recent Bank of Canada's annual USD/CAD exchange rate data from the provided csv file and uses it to convert an amount from one currency to the other (CAD and USD). 
